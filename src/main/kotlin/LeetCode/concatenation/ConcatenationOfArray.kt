@@ -1,4 +1,4 @@
-package LeetCode
+package LeetCode.concatenation
 
 /**
  *
@@ -20,11 +20,15 @@ fun merge(nums: IntArray): IntArray {
     return ans
 }
 
-fun getConcatenation(nums: IntArray): IntArray {
-    val ans = IntArray( 2 * nums.size)
+fun getConcatenation(nums: IntArray, renge: Int): IntArray {
+    val ans = IntArray( renge * nums.size)
     var idx = 0
 
-    for (i in 0 until 2) {
+    nums.indices
+    nums.size
+    nums[0]
+
+    for (i in 0 until renge) {
         for (n in nums) {
             ans[idx++] = n
         }
@@ -35,5 +39,5 @@ fun getConcatenation(nums: IntArray): IntArray {
 
 fun main() {
     val array = intArrayOf(2, 5, 6)
-    getConcatenation(array).contentToString()
+    println(getConcatenation(array, 2).contentToString())
 }
