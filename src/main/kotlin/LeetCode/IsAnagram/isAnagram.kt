@@ -4,7 +4,12 @@ package LeetCode.IsAnagram
 // c, a, r, r, c, e
 
 fun isAnagram(s: String, t: String): Boolean {
-    s.contains(t) // true
+    val Scount = mutableMapOf<Char, Int>()
+
+    s.forEach {
+        Scount[it] = Scount.getOrDefault(it, 0) + 1
+        if (Scount[it] == s.length) return true
+    }
     return false
 }
 
