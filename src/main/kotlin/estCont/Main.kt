@@ -1,6 +1,12 @@
 package estCont
 
 /**
+ * Scope functions:
+ * https://kotlinlang.org/docs/scope-functions.html
+ *
+ */
+
+/**
  *
  *
  * apply é uma scope function (função de escopo) do Kotlin.
