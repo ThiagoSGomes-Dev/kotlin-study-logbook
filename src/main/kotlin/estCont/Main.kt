@@ -48,6 +48,7 @@ fun main() {
         val btnClick = "Text"
         btnClick.apply {
             if (data.button != null) {
+                // if (se) data.button existe
                 visible()
                 text = data.button.text
                 setOnClickListener()
