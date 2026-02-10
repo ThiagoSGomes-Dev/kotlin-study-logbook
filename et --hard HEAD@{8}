@@ -1,0 +1,18 @@
+[33m55f8d7f[m[33m ([m[1;36mHEAD -> [m[1;32mestrutura-de-controle[m[33m)[m HEAD@{0}: reset: moving to HEAD~1
+[33m4cec539[m[33m ([m[1;31morigin/leetcode-is-anagram[m[33m, [m[1;32mleetcode-is-anagram[m[33m)[m HEAD@{1}: checkout: moving from leetcode-is-anagram to estrutura-de-controle
+[33m4cec539[m[33m ([m[1;31morigin/leetcode-is-anagram[m[33m, [m[1;32mleetcode-is-anagram[m[33m)[m HEAD@{2}: commit: [IsAnagram] - thinking about the solution final 0/1
+[33m55f8d7f[m[33m ([m[1;36mHEAD -> [m[1;32mestrutura-de-controle[m[33m)[m HEAD@{3}: commit: [IsAnagram] - thinking about the solution final
+[33m7f46e84[m HEAD@{4}: commit: [IsAnagram] - thinking about the solution 0/2
+[33m4e2e978[m HEAD@{5}: commit: [IsAnagram] - thinking about the solution 0/1
+[33m323dcc5[m HEAD@{6}: checkout: moving from leetcode-has-duplicate to leetcode-is-anagram
+[33mf019251[m[33m ([m[1;31morigin/leetcode-has-duplicate[m[33m, [m[1;32mleetcode-has-duplicate[m[33m)[m HEAD@{7}: reset: moving to HEAD~2
+[33m175231f[m HEAD@{8}: commit: [IsAnagram] - thinking about the solution 0/2
+[33m407ca9c[m HEAD@{9}: commit: [IsAnagram] - thinking about the solution 0/1
+[33mf019251[m[33m ([m[1;31morigin/leetcode-has-duplicate[m[33m, [m[1;32mleetcode-has-duplicate[m[33m)[m HEAD@{10}: commit: [hasDuplicate] - show me the code
+[33m323dcc5[m HEAD@{11}: checkout: moving from leetcode-is-anagram to leetcode-has-duplicate
+[33m323dcc5[m HEAD@{12}: commit: [isAnagram] - show me the code
+[33mde3ce84[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m HEAD@{13}: checkout: moving from main to leetcode-is-anagram
+[33mde3ce84[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m HEAD@{14}: commit: [ConcatenationOfArray] - doc de revisao
+[33m41c8b6e[m HEAD@{15}: commit: descricao de pre-requisitos
+[33mae10028[m HEAD@{16}: commit: 🌱 start project
+[33m45de7d2[m HEAD@{17}: initial pull
