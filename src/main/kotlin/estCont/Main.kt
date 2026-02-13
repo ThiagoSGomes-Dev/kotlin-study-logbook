@@ -92,6 +92,13 @@ fun main() {
             binding.btnContinue.isEnabled = false
         }
 
+        // Trocar texto do botão conforme modo
+        if (isEditMode) {
+            binding.btnAction.text = "Atualizar"
+        } else {
+            binding.btnAction.text = "Criar"
+        }
+
     }
 
 }
