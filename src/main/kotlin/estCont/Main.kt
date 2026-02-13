@@ -30,6 +30,11 @@ package estCont
 
 // Com apply
 
+private val String.editName: Any
+    get() {
+
+    }
+
 /**
  *
  * btnClick.apply {
@@ -40,6 +45,8 @@ package estCont
  *
  */
 
+const val editName = ""
+
 fun main() {
 
     fun visible(): Unit {}
@@ -47,6 +54,7 @@ fun main() {
     fun setOnClickListener(): Unit {}
 
     var text = "textos"
+    var binding = ""
 
     fun bind(
         data: Data
@@ -62,6 +70,42 @@ fun main() {
                 gone()
             }
         }
+
+        // Mostrar/ ocultar botão se campo estiver vazio
+        if (binding.editName.text.isNullOrBlank()) {
+            binding.btnSave.visibility = View.GONE
+        } else {
+            binding.btnSave.visibility = View.VISIBLE
+        }
+
+        // Alterar cor do TextView conforme status
+        if (status == "ERROR") {
+            binding.txtStatus.setTextColor(Color.RED)
+        } else {
+            binding.txtStatus.setTextColor(Color.GREEN)
+        }
+
+        // Habilitar botão só se checkbox marcado
+        if (binding.checkboxTerms.isChecked) {
+            binding.btnContinue.isEnabled = true
+        } else {
+            binding.btnContinue.isEnabled = false
+        }
+
+        // Trocar texto do botão conforme modo
+        if (isEditMode) {
+            binding.btnAction.text = "Atualizar"
+        } else {
+            binding.btnAction.text = "Criar"
+        }
+
+        // Alterar cor do TextView conforme status
+        if (status == "ERROR") {
+            binding.txtStatus.setTextColor(Color.RED)
+        } else {
+            binding.txtStatus.setTextColor(Color.GREEN)
+        }
+
     }
 
 }
