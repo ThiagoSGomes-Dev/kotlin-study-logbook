@@ -30,6 +30,11 @@ package estCont
 
 // Com apply
 
+private val String.editName: Any
+    get() {
+
+    }
+
 /**
  *
  * btnClick.apply {
@@ -40,6 +45,8 @@ package estCont
  *
  */
 
+const val editName = ""
+
 fun main() {
 
     fun visible(): Unit {}
@@ -47,6 +54,7 @@ fun main() {
     fun setOnClickListener(): Unit {}
 
     var text = "textos"
+    var binding = ""
 
     fun bind(
         data: Data
@@ -62,6 +70,15 @@ fun main() {
                 gone()
             }
         }
+
+        // Mostrar/ ocultar botão se campo estiver vazio
+        if (binding.editName.text.isNullOrBlank()) {
+            binding.btnSave.visibility = View.GONE
+        } else {
+            binding.btnSave.visibility = View.VISIBLE
+        }
+
+
     }
 
 }
