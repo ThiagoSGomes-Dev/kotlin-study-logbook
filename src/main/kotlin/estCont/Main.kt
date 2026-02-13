@@ -85,6 +85,12 @@ fun main() {
             binding.txtStatus.setTextColor(Color.GREEN)
         }
 
+        // Habilitar botão só se checkbox marcado
+        if (binding.checkboxTerms.isChecked) {
+            binding.btnContinue.isEnabled = true
+        } else {
+            binding.btnContinue.isEnabled = false
+        }
 
     }
 
