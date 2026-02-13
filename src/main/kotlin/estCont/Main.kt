@@ -99,6 +99,13 @@ fun main() {
             binding.btnAction.text = "Criar"
         }
 
+        // Alterar cor do TextView conforme status
+        if (status == "ERROR") {
+            binding.txtStatus.setTextColor(Color.RED)
+        } else {
+            binding.txtStatus.setTextColor(Color.GREEN)
+        }
+
     }
 
 }
