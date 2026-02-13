@@ -78,6 +78,13 @@ fun main() {
             binding.btnSave.visibility = View.VISIBLE
         }
 
+        // Alterar cor do TextView conforme status
+        if (status == "ERROR") {
+            binding.txtStatus.setTextColor(Color.RED)
+        } else {
+            binding.txtStatus.setTextColor(Color.GREEN)
+        }
+
 
     }
 
