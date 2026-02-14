@@ -106,6 +106,41 @@ fun main() {
             binding.txtStatus.setTextColor(Color.GREEN)
         }
 
+        // Ação do botão (Presenter controla fluxo)
+        enum class Action {
+            SAVE,
+            DELETE,
+            SHARE
+        }
+        fun onAction(action: Action) {
+            when (action) {
+                SAVE -> save()
+                DELETE -> delete()
+                SHARE -> share()
+            }
+        }
+
+        // Resultado de operação
+        enum class OperationResult {
+            SUCCESS,
+            FAILURE,
+            RETRY
+        }
+        when (result) {
+            SUCCESS -> view.showSuccess()
+            FAILURE -> view.showError()
+            RETRY -> retry()
+        }
+
+        // Quando baseado no ID do View clicado
+        override fun onClick(view: View) {
+            when (view.id) {
+                R.id.btnSave -> salvar()
+                R.id.btnDelete -> deletar()
+                R.id.btnShare -> compartilhar()
+            }
+        }
+
     }
 
 }
