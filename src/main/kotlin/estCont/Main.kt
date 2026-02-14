@@ -106,6 +106,20 @@ fun main() {
             binding.txtStatus.setTextColor(Color.GREEN)
         }
 
+        // Ação do botão (Presenter controla fluxo)
+        enum class Action {
+            SAVE,
+            DELETE,
+            SHARE
+        }
+        fun onAction(action: Action) {
+            when (action) {
+                SAVE -> save()
+                DELETE -> delete()
+                SHARE -> share()
+            }
+        }
+
     }
 
 }
