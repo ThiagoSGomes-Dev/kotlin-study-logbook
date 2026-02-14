@@ -120,6 +120,18 @@ fun main() {
             }
         }
 
+        // Resultado de operação
+        enum class OperationResult {
+            SUCCESS,
+            FAILURE,
+            RETRY
+        }
+        when (result) {
+            SUCCESS -> view.showSuccess()
+            FAILURE -> view.showError()
+            RETRY -> retry()
+        }
+
     }
 
 }
