@@ -132,6 +132,15 @@ fun main() {
             RETRY -> retry()
         }
 
+        // Quando baseado no ID do View clicado
+        override fun onClick(view: View) {
+            when (view.id) {
+                R.id.btnSave -> salvar()
+                R.id.btnDelete -> deletar()
+                R.id.btnShare -> compartilhar()
+            }
+        }
+
     }
 
 }
