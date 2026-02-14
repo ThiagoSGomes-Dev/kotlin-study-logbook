@@ -141,6 +141,12 @@ fun main() {
             }
         }
 
+        // Continua vazio
+        val name = text ?: "default"
+        // Correto para null
+        val name = text.takeIf { it.isNotBlank() } ?: "default"
+
+
     }
 
 }
