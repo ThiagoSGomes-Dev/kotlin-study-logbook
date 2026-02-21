@@ -18,10 +18,28 @@ val meuArray: Array<Any> = arrayOf(
     "JUnit"
 )
 
+enum class Items(val label: String) {
+    JAVA("Java"),
+    JAVAC("Javac");
+
+    companion object {
+        fun fromLabel(value: String): Items {
+            return entries.find { it.label.equals(value, ignoreCase = true) }
+                ?: throw IllegalArgumentException("Action inválida: $value")
+        }
+    }
+
+}
+
 fun main() {
 
     val segundoArray = meuArray[2] as Array<*>
     val rawAction = segundoArray[0] as String
 
-    println(rawAction)
+    val items = Items.fromLabel(rawAction)
+
+    when (items) {
+             Items.JAVA -> println("Java")
+            Items.JAVAC -> println("Javac")
+    }
 }
