@@ -23,8 +23,10 @@ enum class Items(val label: String) {
     JAVAC("Javac");
 
     companion object {
+        private val map = entries.associateBy { it.label.lowercase() }
+
         fun fromLabel(value: String): Items {
-            return entries.find { it.label.equals(value, ignoreCase = true) }
+            return map[value.lowercase()]
                 ?: throw IllegalArgumentException("Action inválida: $value")
         }
     }
@@ -39,7 +41,11 @@ fun main() {
     val items = Items.fromLabel(rawAction)
 
     when (items) {
-             Items.JAVA -> println("Java")
-            Items.JAVAC -> println("Javac")
+             Items.JAVA -> {
+                 println("Java")
+             }
+            Items.JAVAC -> {
+                println("Javac")
+            }
     }
 }
