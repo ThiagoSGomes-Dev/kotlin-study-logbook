@@ -23,6 +23,8 @@ enum class Items(val label: String) {
     JAVAC("Javac");
 
     companion object {
+        // TODO: entries coleção interna, de enum em Kotlin
+        // TODO: associateBy transforma uma coleção em um Map, usando uma chave derivada de cada elemento.
         private val map = entries.associateBy { it.label.lowercase() }
 
         fun fromLabel(value: String): Items {
