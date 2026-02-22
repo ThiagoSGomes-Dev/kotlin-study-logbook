@@ -18,6 +18,13 @@ val fluxoApp: Array<Any> = arrayOf(
     "Logout"
 )
 
+enum class HttpMethod() {
+    GET,
+    POST,
+    PUT
+}
+
+
 fun main() {
 
 }
