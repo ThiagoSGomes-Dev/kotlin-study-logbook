@@ -34,7 +34,22 @@ enum class HttpMethod(val label: String) {
 
 }
 
-
 fun main() {
 
+    val arrayInterno = fluxoApp[2] as Array<*>
+    val rawMethod = arrayInterno[1] as String // "POST"
+
+    val httpMethod = HttpMethod.fromLabel(rawMethod)
+
+    when (httpMethod) {
+        HttpMethod.GET -> {
+            println("Executando requisição GET")
+        }
+        HttpMethod.POST -> {
+            println("Executando requisição POST")
+        }
+        HttpMethod.PUT -> {
+            println("Executando requisição PUT")
+        }
+    }
 }
