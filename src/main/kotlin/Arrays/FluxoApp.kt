@@ -18,10 +18,10 @@ val fluxoApp: Array<Any> = arrayOf(
     "Logout"
 )
 
-enum class HttpMethod() {
-    GET,
-    POST,
-    PUT
+enum class HttpMethod(val label: String) {
+    GET("GET"),
+    POST("POST"),
+    PUT("PUT");
 }
 
 
